@@ -67,6 +67,10 @@ PCSX-Security **requires** the following dependency:
 - Only a configuration file is accessible for server owners to adjust settings.
 - Any attempt to modify, decompile, or reverse-engineer the core logic is prohibited.
 
+- ## 👥 Contributors
+
+- [@YourGitHubUsername](https://github.com/AliAcrf) – Script Security : Ali_Acrf
+
 ## 📞 Support
 
 For support, questions, or inquiries, please use the **Discord ticket system**:
@@ -75,7 +79,3 @@ For support, questions, or inquiries, please use the **Discord ticket system**:
 - [Discord Ticket Link](https://discord.gg/pt6KFdDqAS)
 
 🔴 **Note:** Our official website is under development, so Discord is the only communication channel at the moment.
-
-## 👥 Contributors
-
-- [@YourGitHubUsername](https://github.com/AliAcrf) – Script Security : Ali_Acrf
