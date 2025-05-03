@@ -2,21 +2,17 @@
 
 A lightweight and customizable anti-cheat system for **Multi Theft Auto: San Andreas (MTA:SA)** servers. Designed to detect and block common hacks and cheat tools to keep your server fair and clean.
 
-🧩 Usage
-Once started, the anti-cheat will automatically monitor players.
+## 🧩 Usage
+- Once started, the anti-cheat will automatically monitor players.
+- Any suspicious activity will trigger automatic actions (kick/ban) and notify admins.
+- Logs will be saved in the resource folder for further inspection.
 
-Any suspicious activity will trigger automatic actions (kick/ban) and notify admins.
+## 🛠️ Configuration
 
-Logs will be saved in the resource folder for further inspection.
-
-🛠️ Configuration
-You can modify the configuration file to:
-
-Enable/disable specific detections
-
-Change the punishment behavior
-
-Customize admin notification formats
+- You can modify the configuration file to:
+- Enable/disable specific detections
+- Change the punishment behavior
+- Customize admin notification formats
 
 ## 🚀 Features
 
