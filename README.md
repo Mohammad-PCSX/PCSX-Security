@@ -66,3 +66,12 @@ PCSX-Security **requires** the following dependency:
 - PCSX-Security uses encrypted source code to ensure the integrity of the anti-cheat system.
 - Only a configuration file is accessible for server owners to adjust settings.
 - Any attempt to modify, decompile, or reverse-engineer the core logic is prohibited.
+
+## 📞 Support
+
+For support, questions, or inquiries, please use the **Discord ticket system**:
+
+- Join our Discord server and create a support ticket to contact us.
+- [Discord Ticket Link](https://discord.gg/pt6KFdDqAS)
+
+🔴 **Note:** Our official website is under development, so Discord is the only communication channel at the moment.
