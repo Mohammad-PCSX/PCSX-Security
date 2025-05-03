@@ -69,6 +69,7 @@ PCSX-Security **requires** the following dependency:
 
 - ## 👥 Contributors
 
+- [@Mohammad-PCSX](https://github.com/Mohammad-PCSX) – Main Developer
 - [@Ali_Acrf](https://github.com/AliAcrf) – Script Security
 
 ## 📞 Support
