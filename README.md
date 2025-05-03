@@ -75,3 +75,7 @@ For support, questions, or inquiries, please use the **Discord ticket system**:
 - [Discord Ticket Link](https://discord.gg/pt6KFdDqAS)
 
 🔴 **Note:** Our official website is under development, so Discord is the only communication channel at the moment.
+
+## 👥 Contributors
+
+- [@YourGitHubUsername](https://github.com/AliAcrf) – Script Security : Ali_Acrf
