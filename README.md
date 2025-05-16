@@ -22,6 +22,13 @@ A lightweight and customizable anti-cheat system for **Multi Theft Auto: San And
 - Logging system for monitoring suspicious activity
 - Easy configuration and extension
 
+## 🎥 Video Tutorials
+
+Watch the following videos for installation, configuration, and testing of the anti-cheat system:
+
+- [Config Setup & Important Installation Tips](https://www.youtube.com/watch?v=4ASx2pXySEw)  
+- [Complete Installation & Setup Guide](https://youtu.be/RCeeqCcdJF8)
+
 ## 📦 Installation
 
 1. Copy the anti-cheat resource folder into your MTA server's `resources` directory.
