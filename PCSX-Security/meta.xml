@@ -1,0 +1,24 @@
+<meta>
+    <info author="Mohammad_PCSX" version="1.3" name="PCSX-Security" description="Anti-cheat system to protect the server" type="script"/>
+    <!-- 
+        Amozesh : https://www.youtube.com/watch?v=4ASx2pXySEw
+        Amozesh 2 : https://youtu.be/RCeeqCcdJF8 : Amozesh2
+ 
+        =======================================================
+        ==================== MaxSimod Team ====================
+        ============ Main Developer : Mohammad_PCSX ===========
+        ============== Collaboration :  Ali_Acrf ==============
+        ============== Script Security : Ali_Acrf =============
+        ======= Discord : https://discord.gg/pt6KFdDqAS =======
+        ================ PCSX-Security [Beta] =================
+        =======================================================
+    -->
+    <script src="System/System.lua" type="server" />
+    <script src="System/SystemC.lua" type="client" cache="false"/>
+    <script src="Config.lua" type="server" />
+ 
+    <export function="SetGodmode" type="server"/>
+    <export function="SetAdmin" type="server"/>
+    <export function="SetPlayerTeleportVisible" type="server"/>
+    <download_priority_group>300</download_priority_group>
+</meta>

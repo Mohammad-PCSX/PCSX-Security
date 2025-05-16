@@ -1,0 +1,8 @@
+<meta>
+    <info author="Mohammad_PCSX" version="2.1" name="MaxSimod" description="MaxSimod System" type="script"/>
+    <script src="System.lua" type="server"/>
+    <script src="SystemC.lua" type="client" cache="false"/>
+    <export function="MaxSimodAccount" type="server"/>
+    <export function="MS_GUI" type="server"/>
+    <download_priority_group>1000</download_priority_group>
+</meta>
