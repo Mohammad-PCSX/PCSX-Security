@@ -49,3 +49,11 @@
 
 ### 🔧 Bug fixes
 - 🔧 1️⃣ Fixed false kicks caused by players disabling the anti-cheat locally
+
+---
+
+## [1.3.2] - 2025-05-17
+
+### 🔧 Bug fixes for Anti-Cheat
+- 🔧 1️⃣ Fixed the problem of Anti-Cheat not turning on or not connecting to the server
+- 🔧 2️⃣ Fixed the problem of Error 4004# Anti-Cheat
