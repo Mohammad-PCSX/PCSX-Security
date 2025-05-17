@@ -1,0 +1,19 @@
+
+[mtaserver.conf]
+
+<resource src="MaxSimod" startup="1" protected="0" />
+<resource src="PCSX-Security" startup="1" protected="0" />
+
+
+
+
+[acl.xml]
+
+<group name="Admin">
+        <acl name="Moderator"></acl>
+        <acl name="SuperModerator"></acl>
+        <acl name="Admin"></acl>
+        <acl name="RPC"></acl>
+        <object name="resource.MaxSimod"></object>
+        <object name="resource.PCSX-Security"></object>
+</group>
