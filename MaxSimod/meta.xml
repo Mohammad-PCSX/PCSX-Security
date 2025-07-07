@@ -1,5 +1,5 @@
 <meta>
-    <info author="Mohammad_PCSX" version="2.1" name="MaxSimod" description="MaxSimod System" type="script"/>
+    <info author="Mohammad_PCSX" version="2.2" name="MaxSimod" description="MaxSimod System" type="script"/>
     <script src="System.lua" type="server"/>
     <script src="SystemC.lua" type="client" cache="false"/>
     <export function="MaxSimodAccount" type="server"/>

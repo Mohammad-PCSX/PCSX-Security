@@ -1,5 +1,5 @@
 <meta>
-    <info author="Mohammad_PCSX" version="1.3" name="PCSX-Security" description="Anti-cheat system to protect the server" type="script"/>
+    <info author="Mohammad_PCSX" version="1.4" name="PCSX-Security" description="Anti-cheat system to protect the server" type="script"/>
     <!-- 
         Amozesh : https://www.youtube.com/watch?v=4ASx2pXySEw
         Amozesh 2 : https://youtu.be/RCeeqCcdJF8 : Amozesh2
@@ -20,5 +20,9 @@
     <export function="SetGodmode" type="server"/>
     <export function="SetAdmin" type="server"/>
     <export function="SetPlayerTeleportVisible" type="server"/>
+    <file src="System/Web/index.html"/>
+    <file src="System/Web/Design/font.ttf"/>
+    <file src="System/Web/Design/RobotoCondensed-Medium.ttf"/>
+    <file src="System/Web/Design/RobotoCondensed-VariableFont_wght.ttf"/>
     <download_priority_group>300</download_priority_group>
 </meta>

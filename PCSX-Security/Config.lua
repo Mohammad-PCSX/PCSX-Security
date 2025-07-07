@@ -1,34 +1,40 @@
 --[[
                     ================ Amozesh : https://www.youtube.com/watch?v=4ASx2pXySEw : Amozesh ================
-                    =============== Amozesh2 : https://www.youtube.com/watch?v=4ASx2pXySEw : Amozesh2 ===============
+                            =============== Amozesh2 : https://youtu.be/RCeeqCcdJF8 : Amozesh2 ===============
+                                    =============== Amozesh3 : Coming Soon : Amozesh3 ===============
 ]]
-MaxSimod = {-- PCSX-Security[Beta] V1.3
+MaxSimod = {-- PCSX-Security[Beta] V1.4
+    Config_Panel = {
+        Serial = "",
+        CMD = "aco",
+        Key = "o",
+    },
+    Admin = {-- Enter the admin serial here
+        ["Serial"] = true,
+    },
+    Log = {
+        ChatLog = {--Send a report to the admin by entering the serial 
+            ["Serial"] = true,
+        },
+        DiscordLog = {--Log Discord 
+            Kick_WebhookURL = "link",
+            Mysterious_WebhookURL = "link",
+        },
+    },
+    Kick = {--Beta 
+        KickedBy = "Mohammad_PCSX",
+        First_Reason = "[PCSX-Security] ",
+        Kick_Reason = "Be Dalil Cheat Zadan Kick Shodid",
+        Ban_Reason = "Be Dalil Cheat Zadan Ban Shodid",
+    },
+    BanCMD = {
+        Ban = "acban",
+        UnBan = "acunban",
+        BanList = "acbanlist",
+    },
+    --------------------------------------------
+    --------------------------------------------
     Config = {
-        Admin = {-- Enter the admin serial here
-            --["Serial"] = true,
-        },
-        Log = {
-            ChatLog = {--Send a report to the admin by entering the serial 
-                --["Serial"] = true,
-            },
-            DiscordLog = {--Log Discord 
-                Kick_WebhookURL = "webhook_link",
-                Mysterious_WebhookURL = "webhook_link",
-            },
-        },
-        Kick = {--Beta 
-            KickedBy = "Mohammad_PCSX",
-            First_Reason = "[PCSX-Security] ",
-            Kick_Reason = "Be Dalil Cheat Zadan Kick Shodid",
-            Ban_Reason = "Be Dalil Cheat Zadan Ban Shodid",
-        },
-        BanCMD = {
-            Ban = "acban",
-            UnBan = "acunban",
-            BanList = "acbanlist",
-        },
-        --------------------------------------------
-        --------------------------------------------
         CheckPlayerAntiCheat = {
             Active = true,
             Kick = {"Kick","Don't Turn OFF The Anti Cheat :/",ConsoleLog = false,DiscordLog = true,ChatLog = true},
@@ -38,10 +44,29 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
                 DiscordLog = false,
                 ChatLog = true,
             },
+            ClearChat = false,
+            Disable_TriggerEvent = true,--After the entry is confirmed by Anti-Cheat, the trigger event is activated.
+        },
+        Database_BackUp = {
+            Active = false,
+            Connect = {
+                HostIP = "localhost",
+                DatabaseName = "owl",
+                User = "root",
+                Password = "",
+                Port = "3306",
+            },
+            BackUp_Tables = {
+                "accounts",
+                "vehicles",
+            },
+            ExportFile = "Database/",
+            Time = 2*60,
+            MaxBackUp_Delete = 10
         },
         Teleport = {--Teleport Va Speed Hack
             Active = false,
-            --Kick = {"Kick","Teleport",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+            Kick = {false,"Teleport",ConsoleLog = false,DiscordLog = false,ChatLog = false},
             Level = 2,-- 1,2,3
             Log = {
                 Reason = "Cheating : Teleport",
@@ -55,7 +80,7 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
         },
         NoClip = {
             Active = true,
-            --Kick = {"Kick","NoClip",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+            Kick = {false,"NoClip",ConsoleLog = false,DiscordLog = false,ChatLog = false},
             Log = {
                 Reason = "Cheating : Use NoClip",
                 ConsoleLog = false,
@@ -74,9 +99,9 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
                 ChatLog = true,
             },
         },
-        Health = {-- Anti Health (Player)  
+        Health = {-- Anti Health (Player & Vehicle)  
             Active = true,
-            --Kick = {"Kick","Set Health",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+            Kick = {false,"Set Health",ConsoleLog = false,DiscordLog = false,ChatLog = false},
             Log = {
                 Reason = "Cheating : Set Health",
                 ConsoleLog = false,
@@ -96,7 +121,7 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
         },
         Armor = {
             Active = true,
-            --Kick = {"Kick","Set Armor",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+            Kick = {false,"Set Armor",ConsoleLog = false,DiscordLog = false,ChatLog = false},
             Log = {
                 Reason = "Cheating : Set Armor",
                 ConsoleLog = false,
@@ -137,13 +162,28 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
                 ["pMember"] = true,--Dadan Faction
                 ["pRank"] = true,--Taqir Dadan Rank
                 ["pFamiId"] = true,--Dadan FamiId
+                ["pTut"] = true,--
+                ["pFwarn"] = true,--
+                ["pAJailed"] = true,--
+                ["pSex"] = true,--
+                ["pJailTime"] = true,--
+                ["cSkin"] = true,--
+                ["fSkin"] = true,--
+                ["pCreator"] = true,--
+                ["pVip"] = true,--
+                ["pGoldPremium"] = true,--
+                ["pTamrin"] = true,--
+                ["pName"] = true,--
+                ["pLevel"] = true,--
+                ["pID"] = true,--
+                ["pRob"] = true,--
                 -- Server RP (OWL)
                 ["admin_level"] = true,--Dadan Rank Admin
                 ["scripter_level"] = true,--Dadan Rank Scripter
                 ["supporter_level"] = true,--Dadan supporter
                 ["vct_level"] = true,--Dadan vct
             }},
-            --Kick = {"Kick","Be Dadil Estefade SetElementData Shoma Kick Shodid",ConsoleLog = false,DiscordLog = true,ChatLog = true},
+            Kick = {false,"Be Dadil Estefade SetElementData Shoma Kick Shodid",ConsoleLog = false,DiscordLog = true,ChatLog = true},
             Log = {-- Baraye Didan Log , Kick Ro false Konid
                 Reason = "Hacking : Use setElementData Code | Set Data(Key = [=1=] , Value = [=2=])",
                 ConsoleLog = false,
@@ -153,11 +193,24 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
         },
         EventSpam = {
             Active = true,
-            ResetSpamTimer = 1000,
-            MaxSpam = 80,
+            ResetSpamTimer = 800,
+            MaxSpam = 100,
             Kick = {"Kick","Event Spam",ConsoleLog = false,DiscordLog = true,ChatLog = true},
             Log = {-- Baraye Didan Log , Kick Ro false Konid
                 Reason = "Attacking : Event Spam",
+                ConsoleLog = false,
+                DiscordLog = true,
+                ChatLog = true,
+            },
+        },
+        Block_TriggerEvent = {
+            Active = true,
+            Trigger = {
+                ["onClientCallsServerFunction"] = false,
+            },
+            Kick = {"Kick","Use Blook Trigger",ConsoleLog = false,DiscordLog = true,ChatLog = true},
+            Log = {-- Baraye Didan Log , Kick Ro false Konid
+                Reason = "Warning : Use Blook Trigger",
                 ConsoleLog = false,
                 DiscordLog = true,
                 ChatLog = true,
@@ -173,9 +226,9 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
                 ChatLog = true,
             },
         },
-        Spam_ElementData = {--Beta
+        Spam_ElementData = {
             Active = true,
-            MaxSpam = 90,
+            MaxSpam = 120,
             Kick = {"Kick","Element Data Spam",ConsoleLog = false,DiscordLog = true,ChatLog = true},
             Log = {
                 Reason = "Attacking : Element Data Spam (Data : =1=)",
@@ -184,18 +237,9 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
                 ChatLog = true,
             },
         },
-        ServerSpamAttack = {--Beta 
-            Active = true,
-            Log = {
-                Reason = "Server Attack",
-                ConsoleLog = false,
-                DiscordLog = false,
-                ChatLog = true,
-            },
-        },
         ChatSpam = {-- Baraye Didan Log , Kick Ro false Konid
             Active = true,
-            --Kick = {"Kick","Chat Spam",ConsoleLog = false,DiscordLog = true,ChatLog = true},
+            Kick = {false,"Chat Spam",ConsoleLog = false,DiscordLog = true,ChatLog = true},
             Log = {
                 Reason = "Attacking : Chat Spam",
                 ConsoleLog = false,
@@ -215,7 +259,7 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
         },
         PlayerGodmode = {
             Active = false,
-            --Kick = {"Kick","Godmode",ConsoleLog = false,DiscordLog = true,ChatLog = true},
+            Kick = {false,"Godmode",ConsoleLog = false,DiscordLog = true,ChatLog = true},
             Log = {
                 Reason = "Cheating : Use Godmode",
                 ConsoleLog = false,
@@ -223,9 +267,9 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
                 ChatLog = true,
             },
         },
-        VehicleGodmode = {-- Beta 
+        VehicleGodmode = {
             Active = true,
-            --Kick = {"Kick","Vehicle Godmode",ConsoleLog = false,DiscordLog = true,ChatLog = true},
+            Kick = {false,"Vehicle Godmode",ConsoleLog = false,DiscordLog = true,ChatLog = true},
             Log = {
                 Reason = "Cheating : Vehicle Godmode(Plate : =1=)",
                 ConsoleLog = false,
@@ -233,7 +277,7 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
                 ChatLog = true,
             },
         },
-        JetPack = {-- Beta 
+        JetPack = {
             Active = true,
             Kick = {"Kick","JetPack",ConsoleLog = false,DiscordLog = false,ChatLog = false},
             Log = {
@@ -243,9 +287,9 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
                 ChatLog = true,
             },
         },
-        RapidFire = {-- Beta 
+        RapidFire = {-- Beta
             Active = false,
-            --Kick = {"Kick","Rapid Fire",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+            Kick = {false,"Rapid Fire",ConsoleLog = false,DiscordLog = false,ChatLog = false},
             Log = {
                 Reason = "Cheating : Use Rapid Fire",
                 ConsoleLog = false,
@@ -253,9 +297,9 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
                 ChatLog = true,
             },
         },
-        PlayerStats = {--Beta 
+        PlayerStats = {--Beta
             Active = true,
-            --Kick = {"Kick","Change Player Stats",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+            Kick = {false,"Change Player Stats",ConsoleLog = false,DiscordLog = false,ChatLog = false},
             Log = {
                 Reason = "Cheating : Change Player Stats",
                 ConsoleLog = false,
@@ -263,9 +307,9 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
                 ChatLog = true,
             },
         },
-        WeaponProperty = {--Beta 
+        WeaponProperty = {--Beta
             Active = false,
-            --Kick = {"Kick","Change Weapon Property",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+            Kick = {false,"Change Weapon Property",ConsoleLog = false,DiscordLog = false,ChatLog = false},
             Log = {
                 Reason = "Cheating : Change Weapon Property",
                 ConsoleLog = false,
@@ -273,9 +317,9 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
                 ChatLog = true,
             },
         },
-        VehicleHandling = {--Beta 
-            Active = false,
-            --Kick = {"Kick","Change Vehicle Handling",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+        VehicleHandling = {--Beta
+            Active = true,
+            Kick = {false,"Change Vehicle Handling",ConsoleLog = false,DiscordLog = false,ChatLog = false},
             Log = {
                 Reason = "Cheating : Change Vehicle Handling",
                 ConsoleLog = false,
@@ -283,9 +327,9 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
                 ChatLog = true,
             },
         },
-        VehicleUpgrade = {--Beta 
-            Active = false,
-            --Kick = {"Kick","Vehicle Upgrade",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+        VehicleUpgrade = {--Beta
+            Active = true,
+            Kick = {false,"Vehicle Upgrade",ConsoleLog = false,DiscordLog = false,ChatLog = false},
             Log = {
                 Reason = "Cheating : Vehicle Upgrade",
                 ConsoleLog = false,
@@ -293,9 +337,9 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
                 ChatLog = true,
             },
         },
-        AimBot = {--Beta
+        AimBot = {--Beta 
             Active = true,
-            --Kick = {"Kick","Aim Bot",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+            Kick = {false,"Aim Bot",ConsoleLog = false,DiscordLog = false,ChatLog = false},
             Log = {
                 Reason = "Cheating : Use Aim-Bot",
                 ConsoleLog = false,
@@ -304,8 +348,8 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
             },
         },
         GameSpeed = {--Beta 
-            Active = true,
-            --Kick = {"Kick","Change Game Speed",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+            Active = false,
+            Kick = {false,"Change Game Speed",ConsoleLog = false,DiscordLog = false,ChatLog = false},
             Log = {
                 Reason = "Cheating : Change Game Speed",
                 ConsoleLog = false,
@@ -327,10 +371,11 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
                 ChatLog = true,
             },
         },
-        ExecuteScript = {-- Disable Execute Script For Client 50% 
+        ExecuteScript = {-- Disable Execute Script Update
             Active = true,
             Kick = {"Kick","Execute Script",ConsoleLog = false,DiscordLog = false,ChatLog = false},
             Type = 2,-- 1 = Normal , 2 = Pro
+            DisableCode_ServerSide = true,
         },
         AirCar = {-- Flying Car
             Active = true,
@@ -385,9 +430,19 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
             GiveMoney = {
                 Active = true,
                 AdvancedMode = false,--This option is good when the client scripts have not been edited.
-                Kick = {"Kick","Give Money",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+                Kick = {"Kick","Give Money",ConsoleLog = false,DiscordLog = false,ChatLog = true},
                 Log = {
                     Reason = "Hacking : Give Money",
+                    ConsoleLog = false,
+                    DiscordLog = false,
+                    ChatLog = true,
+                },
+            },
+            GiveMoneyBank = {
+                Active = true,
+                Kick = {"Kick","Give Money Bank",ConsoleLog = false,DiscordLog = false,ChatLog = true},
+                Log = {
+                    Reason = "Hacking : Give Money Bank",
                     ConsoleLog = false,
                     DiscordLog = false,
                     ChatLog = true,
@@ -396,7 +451,7 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
             DeleteGate = {
                 Active = true,
                 AdvancedMode = false,--This option is good when the client scripts have not been edited.
-                Kick = {"Kick","Delete Gate",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+                Kick = {"Kick","Delete Gate",ConsoleLog = false,DiscordLog = false,ChatLog = true},
                 Log = {
                     Reason = "Hacking : Delete Gate",
                     ConsoleLog = false,
@@ -407,7 +462,7 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
             DeleteVehicle = {
                 Active = true,
                 AdvancedMode = false,--This option is good when the client scripts have not been edited.
-                Kick = {"Kick","Delete Vehiclelib",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+                Kick = {"Kick","Delete Vehiclelib",ConsoleLog = false,DiscordLog = false,ChatLog = true},
                 Log = {
                     Reason = "Hacking : Delete Vehiclelib",
                     ConsoleLog = false,
@@ -418,7 +473,7 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
             CreateVehicle = {
                 Active = true,
                 AdvancedMode = false,--This option is good when the client scripts have not been edited.
-                Kick = {"Kick","Add Vehiclelib",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+                Kick = {"Kick","Super Jump",ConsoleLog = false,DiscordLog = false,ChatLog = true},
                 Log = {
                     Reason = "Hacking : Add Vehiclelib",
                     ConsoleLog = false,
@@ -429,7 +484,7 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
             GiveCredits = {
                 Active = true,
                 AdvancedMode = false,--This option is good when the client scripts have not been edited.
-                Kick = {"Kick","Give Credits",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+                Kick = {"Kick","Give Credits",ConsoleLog = false,DiscordLog = false,ChatLog = true},
                 DisableClientCredits = true,
                 Log = {
                     Reason = "Hacking : Give Credits",
@@ -440,7 +495,7 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
             },
             ChangeData = {
                 Active = true,
-                Kick = {"Kick","ChangeData",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+                Kick = {"Kick","ChangeData",ConsoleLog = false,DiscordLog = false,ChatLog = true},
                 Log = {
                     Reason = "Hacking : ChangeData",
                     ConsoleLog = false,
@@ -451,7 +506,7 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
             SetAnimation = {
                 Active = true,
                 AdvancedMode = false,--This option is good when the client scripts have not been edited.
-                Kick = {"Kick","Set Animation",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+                Kick = {"Kick","Set Animation",ConsoleLog = false,DiscordLog = false,ChatLog = true},
                 Log = {
                     Reason = "Hacking : Set Animation",
                     ConsoleLog = false,
@@ -462,7 +517,7 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
             EditStaff = {
                 Active = true,
                 AdvancedMode = false,--This option is good when the client scripts have not been edited.
-                Kick = {"Kick","Edit Staff",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+                Kick = {"Kick","Edit Staff",ConsoleLog = false,DiscordLog = false,ChatLog = true},
                 Log = {
                     Reason = "Hacking : Edit Staff",
                     ConsoleLog = false,
@@ -473,7 +528,7 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
             AddMarker = {
                 Active = true,
                 AdvancedMode = false,--This option is good when the client scripts have not been edited.
-                Kick = {"Kick","Add Marker",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+                Kick = {"Kick","Add Marker",ConsoleLog = false,DiscordLog = false,ChatLog = true},
                 Log = {
                     Reason = "Hacking : Add Marker",
                     ConsoleLog = false,
@@ -483,13 +538,188 @@ MaxSimod = {-- PCSX-Security[Beta] V1.3
             },
             SendText = {
                 Active = true,
-                Kick = {"Kick","Spam Chat/Hack Chat",ConsoleLog = false,DiscordLog = false,ChatLog = false},
+                Kick = {"Kick","Spam Chat/Hack Chat",ConsoleLog = false,DiscordLog = false,ChatLog = true},
                 Log = {
                     Reason = "Hacking : Spam Chat/Hack Chat",
                     ConsoleLog = false,
                     DiscordLog = false,
                     ChatLog = true,
                 }, 
+            },
+            DeleteInterior = {
+                Active = true,
+                Kick = {"Kick","Delete Interior",ConsoleLog = false,DiscordLog = false,ChatLog = true},
+                Log = {
+                    Reason = "Hacking : Delete Interior",
+                    ConsoleLog = false,
+                    DiscordLog = false,
+                    ChatLog = true,
+                },
+            },
+            License = {
+                Active = {
+                    Car = true,
+                    Bike = true,
+                    Boat = true,
+                    Fish = true,
+                },
+                Kick = {"Kick","Active Player License",ConsoleLog = false,DiscordLog = false,ChatLog = true},
+                Log = {
+                    Reason = "Hacking : Active Player License",
+                    ConsoleLog = false,
+                    DiscordLog = false,
+                    ChatLog = true,
+                },
+            },
+            RestrainPlayer = {
+                Active = true,
+                Kick = {"Kick","Restrain Player",ConsoleLog = false,DiscordLog = false,ChatLog = true},
+                Log = {
+                    Reason = "Hacking : Restrain Player",
+                    ConsoleLog = false,
+                    DiscordLog = false,
+                    ChatLog = true,
+                },
+            },
+            AdminDuty = {
+                Active = true,
+                Kick = {"Kick","Use Admin Duty",ConsoleLog = false,DiscordLog = false,ChatLog = true},
+                Log = {
+                    Reason = "Hacking : Use Admin Duty",
+                    ConsoleLog = false,
+                    DiscordLog = false,
+                    ChatLog = true,
+                },
+            },
+            GmDuty = {
+                Active = true,
+                Kick = {"Kick","Use Gm Duty",ConsoleLog = false,DiscordLog = false,ChatLog = true},
+                Log = {
+                    Reason = "Hacking : Use Gm Duty",
+                    ConsoleLog = false,
+                    DiscordLog = false,
+                    ChatLog = true,
+                },
+            },
+            DestroyItem = {
+                Active = true,
+                Kick = {"Kick","Destroy Item",ConsoleLog = false,DiscordLog = false,ChatLog = true},
+                Log = {
+                    Reason = "Hacking : Destroy Item",
+                    ConsoleLog = false,
+                    DiscordLog = false,
+                    ChatLog = true,
+                },
+            },
+            DropItem = {
+                Active = true,
+                Kick = {"Kick","Drop Item",ConsoleLog = false,DiscordLog = false,ChatLog = true},
+                Log = {
+                    Reason = "Hacking : Drop Item",
+                    ConsoleLog = false,
+                    DiscordLog = false,
+                    ChatLog = true,
+                },
+            },
+            OpmSend = {
+                Active = true,
+                Kick = {"Kick","Opm Send",ConsoleLog = false,DiscordLog = false,ChatLog = true},
+                Log = {
+                    Reason = "Hacking : Opm Send",
+                    ConsoleLog = false,
+                    DiscordLog = false,
+                    ChatLog = true,
+                },
+            },
+            UseTV = {
+                Active = true,
+                Kick = {"Kick","Active Player TV",ConsoleLog = false,DiscordLog = false,ChatLog = true},
+                Log = {
+                    Reason = "Hacking : Active Player TV",
+                    ConsoleLog = false,
+                    DiscordLog = false,
+                    ChatLog = true,
+                },
+            },
+            SitAnimation = {
+                Active = true,
+                Kick = {"Kick","Active Player Sit Animation",ConsoleLog = false,DiscordLog = false,ChatLog = true},
+                Log = {
+                    Reason = "Hacking : Active Player Sit Animation",
+                    ConsoleLog = false,
+                    DiscordLog = false,
+                    ChatLog = true,
+                },
+            },
+            GiveItem = {
+                Active = true,
+                Kick = {"Kick","Give Item",ConsoleLog = false,DiscordLog = false,ChatLog = true},
+                Log = {
+                    Reason = "Hacking : Give Item",
+                    ConsoleLog = false,
+                    DiscordLog = false,
+                    ChatLog = true,
+                },
+            },
+            ItemMoveSave = {
+                Active = true,
+                Kick = {"Kick","Item Move",ConsoleLog = false,DiscordLog = false,ChatLog = true},
+                Log = {
+                    Reason = "Hacking : Item Move",
+                    ConsoleLog = false,
+                    DiscordLog = false,
+                    ChatLog = true,
+                },
+            },
+            Attack_RegisterAccount = {
+                Active = true,
+                Kick = {"Kick","Attack",ConsoleLog = false,DiscordLog = false,ChatLog = true},
+                Log = {
+                    Reason = "Attacking : Register Account",
+                    ConsoleLog = false,
+                    DiscordLog = false,
+                    ChatLog = true,
+                },
+            },
+            Rope_PlayerTeleport = {
+                Active = true,
+                Kick = {"Kick","Teleport",ConsoleLog = false,DiscordLog = false,ChatLog = true},
+                Log = {
+                    Reason = "Hacking : Teleport",
+                    ConsoleLog = false,
+                    DiscordLog = false,
+                    ChatLog = true,
+                },
+            },
+            OpenATM_PanelForAllPlayer = {
+                Active = true,
+                Kick = {"Kick","Open ATM Panel",ConsoleLog = false,DiscordLog = false,ChatLog = true},
+                Log = {
+                    Reason = "Hacking : Open ATM Panel",
+                    ConsoleLog = false,
+                    DiscordLog = false,
+                    ChatLog = true,
+                },
+            },
+        },
+        IR_RPG__Security = {
+            ---------Active---------
+                IR_RPG__Security_Active = true,
+            ------------------------
+            ------------------------
+            ------------------------
+            ResourceNameFile = {
+                Account = "Accounts-System",
+            },
+            HouseCreate = {
+                Active = true,
+                Kick = {"Kick","House Create",ConsoleLog = false,DiscordLog = false,ChatLog = true},
+                Log = {
+                    Reason = "Hacking : House Create",
+                    ConsoleLog = false,
+                    DiscordLog = false,
+                    ChatLog = true,
+                },
             },
         }
     }
