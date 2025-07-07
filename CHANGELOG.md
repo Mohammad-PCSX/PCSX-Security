@@ -57,3 +57,38 @@
 ### 🔧 Bug fixes for Anti-Cheat
 - 🔧 1️⃣ Fixed the problem of Anti-Cheat not turning on or not connecting to the server
 - 🔧 2️⃣ Fixed the problem of Error 4004# Anti-Cheat
+
+---
+
+## [1.4] BETA - 2025-07-07
+
+### ✨ New updates to the Anti-Cheat
+- ✨ 1️⃣ Added Anti-Cheat Panel  
+- ✨ 2️⃣ Added Database Backup (Highly Requested)  
+- ✨ 3️⃣ Enhanced Anti-Cheat Checks  
+- ✨ 4️⃣ Added Event Trigger Blacklist  
+- ✨ 5️⃣ Disabled Server-Side Loadstring in Script Execution  
+- ✨ 6️⃣ Blocked House Creation in Iranian RPG Servers  
+- ✨ #️⃣ In this version, we also improved the anti-cheat specifically for Iranian RPG game modes and added a dedicated RPG anti-cheat section  
+
+### ✨ Second update – specific to RP-style gamemodes( OWL )
+- ✨ 1️⃣ Prevented Giving Money in Bank  
+- ✨ 2️⃣ Blocked Handcuffing All Players  
+- ✨ 3️⃣ Blocked Duty Access (Admin/GM) by Hackers  
+- ✨ 4️⃣ Prevented Item Dropping  
+- ✨ 5️⃣ Prevented Sending OPM (Chat Spam)  
+- ✨ 6️⃣ Blocked Turning On Other Players’ TVs (Also caused chat spam)  
+- ✨ 7️⃣ Blocked Sit Animation  
+- ✨ 8️⃣ Blocked Giving Items to Self or Others  
+- ✨ 9️⃣ Prevented Item Movement (Used to teleport players, vehicles, etc.)  
+- ✨ 🔟 Blocked Attacking the Account System (Which could crash the server)  
+- ✨ 11: Prevented Giving Licenses to Players  
+- ✨ 12: Blocked Deletion of Interiors  
+- ✨ 13: Prevented Deletion of Vehicles from the Client Side  
+- ✨ 14: Blocked ATM Panel Opening  
+- ✨ 15: Prevented Player Teleportation from the Client Side  
+
+### 🔧 Bug Fixes
+- 🔧 1️⃣ Fixed Server Disconnection Issues  
+- 🔧 2️⃣ Fixed Chat Spam from Client Side  
+- 🔧 3️⃣ Fixed Ban Command Not Working in Anti-Cheat  
