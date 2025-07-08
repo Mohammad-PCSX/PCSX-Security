@@ -193,8 +193,8 @@ MaxSimod = {-- PCSX-Security[Beta] V1.4
         },
         EventSpam = {
             Active = true,
-            ResetSpamTimer = 800,
-            MaxSpam = 100,
+            ResetSpamTimer = 150,
+            MaxSpam = 1000,
             Kick = {"Kick","Event Spam",ConsoleLog = false,DiscordLog = true,ChatLog = true},
             Log = {-- Baraye Didan Log , Kick Ro false Konid
                 Reason = "Attacking : Event Spam",
@@ -228,7 +228,7 @@ MaxSimod = {-- PCSX-Security[Beta] V1.4
         },
         Spam_ElementData = {
             Active = true,
-            MaxSpam = 120,
+            MaxSpam = 2000,
             Kick = {"Kick","Element Data Spam",ConsoleLog = false,DiscordLog = true,ChatLog = true},
             Log = {
                 Reason = "Attacking : Element Data Spam (Data : =1=)",
