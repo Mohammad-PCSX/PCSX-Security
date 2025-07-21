@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PCSX-Security</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0f0f1a;
+      background: #0f0f1a;
       color: #00bfff;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
-    }
-    .top {
-      display: flex;
-      justify-content: center;
       align-items: center;
-      background-color: #0a0a14;
-      padding: 3rem 1rem;
-      border-bottom: 1px solid #00bfff33;
+      justify-content: center;
+      height: 100vh;
+      background-image: linear-gradient(135deg, #0d0d1a 30%, #000c1f 70%);
     }
-    .top h1 {
-      font-size: 2.5rem;
-      margin-right: 2rem;
+    h1 {
+      font-size: 2.9rem;
+      letter-spacing: 1px;
+      text-shadow: 0 0 8px rgba(0,191,255,0.7);
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      text-align: center;
+      line-height: 1.8;
+      margin-bottom: 3.5rem;
+    }
+    .box {
+      border: 1px solid #00bfff88;
+      padding: 2rem;
+      padding-bottom: 5rem;
+      border-radius: 12px;
+      background-color: rgba(0, 0, 30, 0.3);
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
+      text-align: center;
     }
     .download-btn {
+      margin-top: 1.5rem;
       padding: 1rem 2rem;
-      font-size: 1.1rem;
       background-color: #00bfff;
       color: #0f0f1a;
-      text-decoration: none;
+      border: none;
       border-radius: 8px;
       font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
       box-shadow: 0 0 10px rgba(0,191,255,0.4);
       transition: background 0.3s, transform 0.2s;
     }
@@ -42,42 +55,20 @@
       background-color: #009ad6;
       transform: scale(1.05);
     }
-    .readme {
-      flex: 1;
-      padding: 2rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .readme h2 {
-      color: #00bfff;
-      margin-bottom: 1rem;
-    }
-    .readme p {
-      margin-bottom: 0.8rem;
-      line-height: 1.6;
-    }
     footer {
-      text-align: center;
-      padding: 1rem;
-      color: #666;
-      font-size: 0.9rem;
-      margin-top: auto;
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.8rem;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <div class="top">
+  <div class="box">
     <h1>PCSX-Security</h1>
-    <a href="https://github.com/Mohammad-PCSX/PCSX-Security/archive/refs/heads/main.zip" class="download-btn">دانلود مستقیم</a>
+    <p>Advanced anti-cheat system for <strong>MTA:SA</strong> servers with RP-specific protections and admin tools</p>
+    <a href="https://github.com/Mohammad-PCSX/PCSX-Security/archive/refs/heads/main.zip" class="download-btn">Download Now</a>
   </div>
-
-  <div class="readme">
-    <h2>درباره</h2>
-    <p>PCSX-Security یک سیستم ضد تقلب ساده، قابل توسعه و سبک برای سرورهای MTA:SA است که با هدف جلوگیری از استفاده از ابزارهای تقلب، اجرای اسکریپت‌های غیرمجاز و افزایش امنیت سرور ساخته شده است.</p>
-    <p>با قابلیت‌های پیکربندی پیشرفته، امکان سفارشی‌سازی کامل نحوه عملکرد سیستم برای ادمین‌ها فراهم شده است.</p>
-    <p>مناسب برای سرورهایی که به دنبال راهکار ساده ولی مؤثر برای مقابله با چیت هستند.</p>
-  </div>
-
   <footer>
     &copy; 2025 Mohammad-PCSX | All rights reserved
   </footer>
