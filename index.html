@@ -18,15 +18,10 @@
       background-image: linear-gradient(135deg, #0d0d1a 30%, #000c1f 70%);
     }
     h1 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       letter-spacing: 1px;
       text-shadow: 0 0 8px rgba(0,191,255,0.7);
-    }
-    p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      text-align: center;
-      line-height: 1.6;
+      margin-bottom: 1rem;
     }
     .box {
       border: 1px solid #00bfff88;
@@ -35,9 +30,11 @@
       background-color: rgba(0, 0, 30, 0.3);
       box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
       text-align: center;
+      max-width: 500px;
     }
-    .download-btn {
-      margin-top: 1.5rem;
+    .download-btn, .link-btn {
+      display: inline-block;
+      margin: 0.5rem;
       padding: 0.75rem 1.5rem;
       background-color: #00bfff;
       color: #0f0f1a;
@@ -49,7 +46,7 @@
       box-shadow: 0 0 10px rgba(0,191,255,0.4);
       transition: background 0.3s, transform 0.2s;
     }
-    .download-btn:hover {
+    .download-btn:hover, .link-btn:hover {
       background-color: #009ad6;
       transform: scale(1.05);
     }
@@ -64,8 +61,9 @@
 <body>
   <div class="box">
     <h1>PCSX-Security</h1>
-    <p>A lightweight, modular anti-cheat system for <strong>MTA:SA</strong> servers, built for speed, accuracy, and simplicity. Protect your server with futuristic tech.</p>
-    <a href="https://github.com/Mohammad-PCSX/PCSX-Security/archive/refs/heads/main.zip" class="download-btn">Download Now</a>
+    <a href="https://github.com/Mohammad-PCSX/PCSX-Security/archive/refs/heads/main.zip" class="download-btn">دانلود مستقیم</a>
+    <a href="https://discord.gg/pt6KFdDqAS" class="link-btn" target="_blank">دیسکورد</a>
+    <a href="https://mohammad-pcsx.github.io/PCSX-Security/" class="link-btn" target="_blank">وب‌سایت</a>
   </div>
   <footer>
     &copy; 2025 Mohammad-PCSX | All rights reserved
