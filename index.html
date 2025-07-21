@@ -5,32 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PCSX-Security</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #0f0f1a;
       color: #00bfff;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       height: 100vh;
       background-image: linear-gradient(135deg, #0d0d1a 30%, #000c1f 70%);
     }
+    .sidebar {
+      width: 280px;
+      background-color: #0a0a14;
+      padding: 1.5rem;
+      border-right: 1px solid #00bfff33;
+    }
+    .sidebar h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #00bfff;
+    }
+    .tab-btn {
+      display: block;
+      margin: 0.5rem 0;
+      padding: 0.6rem 1rem;
+      background: none;
+      border: 1px solid #00bfff66;
+      color: #00bfff;
+      border-radius: 6px;
+      text-align: left;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .tab-btn:hover, .tab-btn.active {
+      background-color: #001f33;
+    }
+    .main {
+      flex-grow: 1;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-y: auto;
+    }
     h1 {
       font-size: 3rem;
-      letter-spacing: 1px;
       text-shadow: 0 0 8px rgba(0,191,255,0.7);
       margin-bottom: 1rem;
     }
-    .box {
-      border: 1px solid #00bfff88;
-      padding: 2rem;
-      border-radius: 12px;
-      background-color: rgba(0, 0, 30, 0.3);
-      box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
-      text-align: center;
-      max-width: 500px;
+    .button-group {
+      margin-top: 1rem;
     }
     .download-btn, .link-btn {
       display: inline-block;
@@ -50,23 +77,76 @@
       background-color: #009ad6;
       transform: scale(1.05);
     }
+    .tab-content {
+      display: none;
+      max-width: 700px;
+      margin-top: 2rem;
+      text-align: left;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .tab-content video, .tab-content img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 1rem;
+      box-shadow: 0 0 10px #00bfff44;
+    }
     footer {
-      position: absolute;
-      bottom: 15px;
+      text-align: center;
+      padding: 1rem;
       font-size: 0.8rem;
       color: #555;
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>PCSX-Security</h1>
-    <a href="https://github.com/Mohammad-PCSX/PCSX-Security/archive/refs/heads/main.zip" class="download-btn">دانلود مستقیم</a>
-    <a href="https://discord.gg/pt6KFdDqAS" class="link-btn" target="_blank">دیسکورد</a>
-    <a href="https://mohammad-pcsx.github.io/PCSX-Security/" class="link-btn" target="_blank">وب‌سایت</a>
+  <div class="sidebar">
+    <h2>PCSX-Security</h2>
+    <button class="tab-btn active" onclick="showTab('overview')">توضیحات</button>
+    <button class="tab-btn" onclick="showTab('video')">ویدیو</button>
+    <button class="tab-btn" onclick="showTab('images')">تصاویر</button>
   </div>
-  <footer>
-    &copy; 2025 Mohammad-PCSX | All rights reserved
-  </footer>
+
+  <div class="main">
+    <h1>PCSX-Security</h1>
+    <div class="button-group">
+      <a href="https://github.com/Mohammad-PCSX/PCSX-Security/archive/refs/heads/main.zip" class="download-btn">دانلود مستقیم</a>
+      <a href="https://discord.gg/pt6KFdDqAS" class="link-btn" target="_blank">دیسکورد</a>
+      <a href="https://mohammad-pcsx.github.io/PCSX-Security/" class="link-btn" target="_blank">وب‌سایت</a>
+    </div>
+
+    <div id="overview" class="tab-content active">
+      <h3>درباره ضد تقلب</h3>
+      <p>این سیستم ضد تقلب برای سرورهای MTA طراحی شده تا با دقت بالا و سبک بودن از ورود تقلب جلوگیری کند. با ساختاری ماژولار و قابل پیکربندی، امنیت سرور شما را به سطح جدیدی می‌رساند.</p>
+    </div>
+
+    <div id="video" class="tab-content">
+      <h3>ویدیو راهنما</h3>
+      <video controls>
+        <source src="https://pcsx.ir/assets/demo.mp4" type="video/mp4">
+        مرورگر شما از نمایش ویدیو پشتیبانی نمی‌کند.
+      </video>
+    </div>
+
+    <div id="images" class="tab-content">
+      <h3>تصاویر</h3>
+      <img src="https://pcsx.ir/assets/screenshot1.png" alt="نمایی از سیستم" />
+      <img src="https://pcsx.ir/assets/screenshot2.png" alt="تنظیمات" />
+    </div>
+
+    <footer>
+      &copy; 2025 Mohammad-PCSX | All rights reserved
+    </footer>
+  </div>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.querySelector(`#${id}`).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
 </body>
 </html>
