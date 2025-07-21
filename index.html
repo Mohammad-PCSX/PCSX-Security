@@ -12,26 +12,20 @@
       background-color: #0f0f1a;
       color: #00bfff;
       display: flex;
-      height: 100vh;
-    }
-    .left, .right {
-      flex: 1;
-      padding: 2rem;
-      display: flex;
       flex-direction: column;
+      min-height: 100vh;
+    }
+    .top {
+      display: flex;
       justify-content: center;
       align-items: center;
-    }
-    .left {
       background-color: #0a0a14;
-      border-right: 1px solid #00bfff33;
+      padding: 3rem 1rem;
+      border-bottom: 1px solid #00bfff33;
     }
-    .right {
-      background-color: #0f0f1a;
-    }
-    h1 {
+    .top h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin-right: 2rem;
     }
     .download-btn {
       padding: 1rem 2rem;
@@ -49,8 +43,10 @@
       transform: scale(1.05);
     }
     .readme {
-      max-width: 600px;
-      text-align: left;
+      flex: 1;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
     }
     .readme h2 {
       color: #00bfff;
@@ -60,21 +56,30 @@
       margin-bottom: 0.8rem;
       line-height: 1.6;
     }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #666;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
   </style>
 </head>
 <body>
-  <div class="left">
+  <div class="top">
     <h1>PCSX-Security</h1>
     <a href="https://github.com/Mohammad-PCSX/PCSX-Security/archive/refs/heads/main.zip" class="download-btn">دانلود مستقیم</a>
   </div>
 
-  <div class="right">
-    <div class="readme">
-      <h2>درباره</h2>
-      <p>PCSX-Security یک سیستم ضد تقلب ساده، قابل توسعه و سبک برای سرورهای MTA:SA است که با هدف جلوگیری از استفاده از ابزارهای تقلب، اجرای اسکریپت‌های غیرمجاز و افزایش امنیت سرور ساخته شده است.</p>
-      <p>با قابلیت‌های پیکربندی پیشرفته، امکان سفارشی‌سازی کامل نحوه عملکرد سیستم برای ادمین‌ها فراهم شده است.</p>
-      <p>مناسب برای سرورهایی که به دنبال راهکار ساده ولی مؤثر برای مقابله با چیت هستند.</p>
-    </div>
+  <div class="readme">
+    <h2>درباره</h2>
+    <p>PCSX-Security یک سیستم ضد تقلب ساده، قابل توسعه و سبک برای سرورهای MTA:SA است که با هدف جلوگیری از استفاده از ابزارهای تقلب، اجرای اسکریپت‌های غیرمجاز و افزایش امنیت سرور ساخته شده است.</p>
+    <p>با قابلیت‌های پیکربندی پیشرفته، امکان سفارشی‌سازی کامل نحوه عملکرد سیستم برای ادمین‌ها فراهم شده است.</p>
+    <p>مناسب برای سرورهایی که به دنبال راهکار ساده ولی مؤثر برای مقابله با چیت هستند.</p>
   </div>
+
+  <footer>
+    &copy; 2025 Mohammad-PCSX | All rights reserved
+  </footer>
 </body>
 </html>
