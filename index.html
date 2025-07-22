@@ -17,11 +17,49 @@
       height: 100vh;
       background-image: linear-gradient(135deg, #0d0d1a 30%, #000c1f 70%);
     }
+
+    header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 30, 0.3);
+      border-bottom: 1px solid #00bfff55;
+      box-shadow: 0 0 10px rgba(0,191,255,0.1);
+    }
+
+    .team-name {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #00bfff;
+      text-shadow: 0 0 4px #00bfff88;
+    }
+
+    .github-btn {
+      background: none;
+      border: 1px solid #00bfff88;
+      color: #00bfff;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .github-btn:hover {
+      background: #00bfff;
+      color: #0f0f1a;
+    }
+
     h1 {
       font-size: 2.9rem;
       letter-spacing: 1px;
       text-shadow: 0 0 8px rgba(0,191,255,0.7);
     }
+
     p {
       font-size: 1.2rem;
       max-width: 600px;
@@ -29,6 +67,7 @@
       line-height: 1.8;
       margin-bottom: 3.5rem;
     }
+
     .box {
       border: 1px solid #00bfff88;
       padding: 2rem;
@@ -38,6 +77,7 @@
       box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
       text-align: center;
     }
+
     .download-btn {
       margin-top: 1.5rem;
       padding: 1rem 2rem;
@@ -51,10 +91,12 @@
       box-shadow: 0 0 10px rgba(0,191,255,0.4);
       transition: background 0.3s, transform 0.2s;
     }
+
     .download-btn:hover {
       background-color: #009ad6;
       transform: scale(1.05);
     }
+
     footer {
       position: absolute;
       bottom: 15px;
@@ -64,11 +106,17 @@
   </style>
 </head>
 <body>
+  <header>
+    <div class="team-name">MaxSimod</div>
+    <a href="https://github.com/Mohammad-PCSX/PCSX-Security" class="github-btn" target="_blank">GitHub</a>
+  </header>
+
   <div class="box">
     <h1>PCSX-Security</h1>
     <p>Advanced anti-cheat system for <strong>MTA:SA</strong> servers with RP-specific protections and admin tools</p>
     <a href="https://github.com/Mohammad-PCSX/PCSX-Security/archive/refs/heads/main.zip" class="download-btn">Download Now</a>
   </div>
+
   <footer>
     &copy; 2025 Mohammad-PCSX | All rights reserved
   </footer>
